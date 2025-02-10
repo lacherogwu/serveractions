@@ -1,0 +1,13 @@
+{
+	"name": "@serveractions/client",
+	"version": "0.0.0",
+	"description": "",
+	"exports": {
+		".": "./src/main.ts"
+	},
+	"scripts": {},
+	"keywords": [],
+	"author": "LacheRo`",
+	"license": "MIT",
+	"type": "module"
+}

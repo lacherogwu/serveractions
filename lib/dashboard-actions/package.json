@@ -1,0 +1,17 @@
+{
+	"name": "dashboard-actions",
+	"version": "1.0.0",
+	"description": "",
+	"exports": {
+		".": "./src/index.ts"
+	},
+	"scripts": {},
+	"keywords": [],
+	"author": "LacheRo`",
+	"license": "MIT",
+	"type": "module",
+	"dependencies": {
+		"@serveractions/server": "workspace:^",
+		"zod": "^3.24.1"
+	}
+}
