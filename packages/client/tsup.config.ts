@@ -1,8 +1,8 @@
 import { defineConfig } from 'tsup';
 
 export default defineConfig(() => ({
-	name: '@serveractions/server',
-	entry: ['src/main.ts', 'src/adapters/*.ts'],
+	name: '@serveractions/client',
+	entry: ['src/main.ts'],
 	format: ['esm'],
 	bundle: true,
 	clean: true,
