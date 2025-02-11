@@ -2,9 +2,12 @@
 import HelloWorld from './components/HelloWorld.vue';
 import { client } from './service/rpc';
 
-client.user.list({}).then(d => {
+client.user.list().then(d => {
 	console.log(d);
 });
+// client.user.create({ createdAt: new Date(), name: 'moshe' }).then(d => {
+// 	console.log(d);
+// });
 </script>
 
 <template>

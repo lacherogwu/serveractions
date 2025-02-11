@@ -52,3 +52,12 @@ export const findFirst2 = defineAction({
 		return { id: 1, name: 'abc', password: '123456' };
 	},
 });
+
+export const update = defineAction({
+	input: z.object({
+		id: z.number().optional(),
+	}),
+	handler: async input => {
+		console.log(input.id);
+	},
+});

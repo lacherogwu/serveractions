@@ -20,7 +20,9 @@ export type ClientType<T> = T extends Record<string, any>
 			}
 				? T[K]['input'] extends undefined
 					? () => Promise<T[K]['output']>
-					: (input: T[K]['input']) => Promise<T[K]['output']>
+					: T[K]['input'] extends Required<T[K]['input']>
+					? (input: T[K]['input']) => Promise<T[K]['output']>
+					: (input?: T[K]['input']) => Promise<T[K]['output']>
 				: ClientType<T[K]>;
 	  }
 	: never;

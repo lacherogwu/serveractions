@@ -15,8 +15,8 @@ app.register(cors);
 app.post('/_actions/:path', async (req, res) => {
 	const { path } = req.params;
 
-	const body = devalue.unflatten(req.body);
-	console.log(body);
+	// const body = devalue.unflatten(req.body);
+	// console.log(body);
 
 	const output = {
 		id: 1,
