@@ -1,10 +1,24 @@
 <script setup lang="ts">
+import { ref } from 'vue';
 import HelloWorld from './components/HelloWorld.vue';
-import { client } from './service/rpc';
+// import { client } from './service/rpc';
+import { actions } from 'vite:actions';
 
-client.user.list().then(d => {
-	console.log(d);
-});
+// await actions.user.list({ id: '1' });
+const data = ref();
+
+actions.createMshu();
+// getData();
+
+async function getData() {
+	const result = await actions.user.doSomething();
+	console.log(result);
+	data.value = result;
+}
+
+// client.user.list().then(d => {
+// 	console.log(d);
+// });
 // client.user.create({ createdAt: new Date(), name: 'moshe' }).then(d => {
 // 	console.log(d);
 // });
@@ -19,6 +33,7 @@ client.user.list().then(d => {
 			<img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
 		</a>
 	</div>
+	<pre>{{ data }}</pre>
 	<HelloWorld msg="Vite + Vue" />
 </template>
 

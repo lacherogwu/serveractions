@@ -4,5 +4,5 @@ import { actionsVite } from '@serveractions/server/adapters/vite';
 
 // https://vite.dev/config/
 export default defineConfig({
-	plugins: [vue(), actionsVite({})],
+	plugins: [vue(), actionsVite()],
 });

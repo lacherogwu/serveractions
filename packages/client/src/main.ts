@@ -1,6 +1,9 @@
 import axios from 'axios';
 import type { Opts, ClientType } from './types';
 import * as devalue from 'devalue';
+export type { ClientType } from './types';
+
+// TODO: implement createSafeClient which returns { data, error } instead of throwing
 
 type ProxyCallbackOpts = {
 	path: string[];

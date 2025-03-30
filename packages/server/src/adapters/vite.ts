@@ -1,6 +1,1 @@
-import { esbuildVersion } from 'vite';
-
-export function actionsVite(options: any) {
-	console.log({ esbuildVersion });
-	return options;
-}
+export { plugin as actionsVite } from './vite/plugin';

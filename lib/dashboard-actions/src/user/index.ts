@@ -11,7 +11,16 @@ export const list = defineAction({
 			name: z.string(),
 		}),
 	),
-	handler: async () => {},
+	handler: async input => {
+		console.log(input);
+
+		return [
+			{
+				id: '1',
+				name: 'test',
+			},
+		];
+	},
 });
 
 export const doSomething = defineAction({
